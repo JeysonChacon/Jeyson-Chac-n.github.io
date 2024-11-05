@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Tienda de Dulces</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a Mi Tienda de Dulces</h1>
+        <nav>
+            <a href="#productos">Productos</a>
+            <a href="#carrito">Carrito</a>
+        </nav>
+    </header>
+
+    <section id="productos">
+        <h2>Catálogo de Dulces</h2>
+
+        <div class="producto" data-id="prod_001" data-precio="5">
+            <img src="gomitas.jpg" alt="Gomitas">
+            <h3>Gomitas</h3>
+            <p>Deliciosas gomitas de sabores frutales.</p>
+            <p>Precio: $5</p>
+            <button onclick="agregarAlCarrito('prod_001', 'Gomitas', 5)">Añadir al carrito</button>
+        </div>
+
+        <div class="producto" data-id="prod_002" data-precio="3">
+            <img src="chocolate.jpg" alt="Chocolate">
+            <h3>Chocolate</h3>
+            <p>Chocolate con leche cremoso y delicioso.</p>
+            <p>Precio: $3</p>
+            <button onclick="agregarAlCarrito('prod_002', 'Chocolate', 3)">Añadir al carrito</button>
+        </div>
+
+        <div class="producto" data-id="prod_003" data-precio="4">
+            <img src="caramelos.jpg" alt="Caramelos">
+            <h3>Caramelos</h3>
+            <p>Caramelos variados con sabores intensos.</p>
+            <p>Precio: $4</p>
+            <button onclick="agregarAlCarrito('prod_003', 'Caramelos', 4)">Añadir al carrito</button>
+        </div>
+
+        <div class="producto" data-id="prod_004" data-precio="6">
+            <img src="turron.jpg" alt="Turrón">
+            <h3>Turrón</h3>
+            <p>Turrón suave y dulce, ideal para cualquier ocasión.</p>
+            <p>Precio: $6</p>
+            <button onclick="agregarAlCarrito('prod_004', 'Turrón', 6)">Añadir al carrito</button>
+        </div>
+
+        <div class="producto" data-id="prod_005" data-precio="7">
+            <img src="galletas.jpg" alt="Galletas">
+            <h3>Galletas</h3>
+            <p>Galletas caseras con chispas de chocolate.</p>
+            <p>Precio: $7</p>
+            <button onclick="agregarAlCarrito('prod_005', 'Galletas', 7)">Añadir al carrito</button>
+        </div>
+    </section>
+
+    <section id="carrito">
+        <h2>Carrito de Compras</h2>
+        <ul id="lista-carrito"></ul>
+        <p id="total">Total: $0</p>
+        <button id="pagar">Pagar</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Mi Tienda de Dulces</p>
+    </footer>
+
+    <!-- Stripe JS -->
+    <script src="https://js.stripe.com/v3/"></script>
+    <!-- Scripts personalizados -->
+    <script src="scripts.js"></script>
+</body>
+</html>
